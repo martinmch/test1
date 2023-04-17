@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <title>
+      
+      Avoid complex flow constructs - martinmch.com
+      
+    </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+    
+</head>
+
+    <body class="page-template">
+        <header id="top-of-site">
+    <div>
+        <h3>
+            <a href="/en/">
+                
+                    martinmch.
+                
+            </a>
+            <br>
+            <small>x</small>
+        </h3>
+    </div>
+
+    <div class="nav">
+        
+        
+    </div>
+</header>
+
+        <main class="content" role="main">
+            
+<main class="content" role="main">
+  <article class="post page">
+    <header class="post-header">
+      <h1 class="post-title">Avoid complex flow constructs</h1>
+      <p class="byline">
+        by <span class="author">Martin Christiansen</span>
+      </p>
+    </header>
+    <section class="post-content">
+      <h1 id="if">If</h1>
+<p><code>If</code> is one of the major flow constructs in most languages. There are plenty of
+cases where <code>if</code> statements are completely justified, but there are also a lot
+of places, where they&rsquo;re unnecessary. Consider the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> UsingIfs
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IDrink</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> Name { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>        List&lt;Ingredient&gt; Ingredients { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">float</span> Price { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OrangeJuice</span> : IDrink
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name =&gt; <span style="color:#e6db74">&#34;Orange juice&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> List&lt;Ingredient&gt; Ingredients
+</span></span><span style="display:flex;"><span>            =&gt; <span style="color:#66d9ef">new</span> List() { Ingredient.Oranges };
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">float</span> Price { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> OrangeJuice(<span style="color:#66d9ef">float</span> price) =&gt; Price = price;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppleJuice</span> : IDrink
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name =&gt; <span style="color:#e6db74">&#34;Apple juice&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> List&lt;Ingredient&gt; Ingredients
+</span></span><span style="display:flex;"><span>            =&gt; <span style="color:#66d9ef">new</span> List() { Ingredient.Apples };
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">float</span> Price { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> OrangeJuice(<span style="color:#66d9ef">float</span> price) =&gt; Price = price;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Water</span> : IDrink
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name =&gt; nameof(Water);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> List&lt;Ingredient&gt; Ingredients
+</span></span><span style="display:flex;"><span>            =&gt; Ingredient.None;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">float</span> Price { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> Water(<span style="color:#66d9ef">float</span> price) =&gt; Price = price;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DrinkAnalyzer</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> Weight DetermineSugarContent(IDrink drink)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(drink <span style="color:#66d9ef">is</span> AppleJuice)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> Weight.FromGrams(<span style="color:#ae81ff">11</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(drink <span style="color:#66d9ef">is</span> OrangeJuice)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> Weight.FromGrams(<span style="color:#ae81ff">9</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(drink <span style="color:#66d9ef">is</span> Water)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> Weight.FromGrams(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NotImplementedException(<span style="color:#e6db74">&#34;Drink not supported in {0}&#34;</span>
+</span></span><span style="display:flex;"><span>                        , nameof(DrinkAnalyzer));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The <code>DrinkAnalyzer</code> is lying. It&rsquo;s blatantly saying that</p>
+<pre tabindex="0"><code>DetermineSugarContent :: IDrink -&gt; Weight
+</code></pre><p>But the <code>DetermineSugarContent</code>
+doesn&rsquo;t cover all elements in it&rsquo;s domain (<code>IDrink</code>). There are multiple ways to
+solve this.</p>
+<p>An alternative implementation of the <code>DrinkAnalyzer</code> without the <code>if</code>s:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DrinkAnalyzer2</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Weight DetermineSugarContent(AppleJuice j) =&gt; Weight.FromGrams(<span style="color:#ae81ff">11</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Weight DetermineSugarContent(OrangeJuice j) =&gt; Weight.FromGrams(<span style="color:#ae81ff">9</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Weight DetermineSugarContent(Water j) =&gt; Weight.FromGrams(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>If we stop for a moment, and rethink our domain logic, we can ask ourselves: &ldquo;Is
+the sugar content a part of a drink?&rdquo;. If the answer is yes, we must incorporate
+this in our <code>IDrink</code> interface.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IDrink2</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> Name { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>        List&lt;Ingredient&gt; Ingredients { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">float</span> Price { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>        Weight SugarContent { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>In all cases the <code>DrinkAnalyzer</code> is tightly coupled with the various IDrink
+implementations.</p>
+<h1 id="goto">Goto</h1>
+<p>Go to statements are &ldquo;considered harmful&rdquo;, as popularized by Dijkstra
+in the 1960s. The compiler has a hard time optimizing gotos, and it&rsquo;s
+difficult to argue about the correctness of logic using go tos. The most
+common place to see go tos in high-level languages is breaking out of
+nested loops. Consider the following <em>crude</em> example:<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> ValueInAllRows(Matrix&lt;T&gt; v, T <span style="color:#66d9ef">value</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (Row&lt;T&gt; r <span style="color:#66d9ef">in</span> v.Rows)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">foreach</span> (Entry&lt;T&gt; e <span style="color:#66d9ef">in</span> r)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (e.Value == <span style="color:#66d9ef">value</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">goto</span> NextRow;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">goto</span> Fail;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        NextRow:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Fail:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This can easily be refactored to functions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> ValueInRow(Row&lt;T&gt; row, T Value)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (Entry&lt;T&gt; e <span style="color:#66d9ef">in</span> r)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (e.Value == <span style="color:#66d9ef">value</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> ValueInAllRows(Matrix&lt;T&gt; v, T <span style="color:#66d9ef">value</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (Row&lt;T&gt; r <span style="color:#66d9ef">in</span> v.Rows)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (!ValueInRow(<span style="color:#66d9ef">value</span>))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="recursion">Recursion</h1>
+<p>Many people using recursion come from functional languages. In functional
+languages tail-recursive functions can be optimized to run as optimally as
+loops. This is because we can optimize the stack allocation for tail-recursive
+functions, and thus reduce the spatial complexity of the function.</p>
+<p>In object-oriented languages recursive functions usually aren&rsquo;t optimized.
+Recursive functions usually lead to a bunch of stack allocations, that can be
+avoided by using loops. Consider the following function for calculating a
+Fibonacci number:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> Fib(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">int</span> b = <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#66d9ef">switch</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">0</span> =&gt; a,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">1</span> =&gt; b,
+</span></span><span style="display:flex;"><span>        _ =&gt; Fib(n - <span style="color:#ae81ff">1</span>, b, a + b)
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This function runs in <code>O(n)</code> time and has a spatial complexity of <code>O(n)</code>. If
+tail-recursive optimization was used, this would have a spacial complexity of
+<code>O(1)</code>.</p>
+<p>Now consider another implementation using a <code>for</code>-loop:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> Fibonacci(<span style="color:#66d9ef">int</span> n)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> b = <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; n; i++)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        (a, b) = (b, a+b);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This function also runs in <code>O(n)</code> time, but has a spatial complexity of just
+<code>O(1)</code>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>I had to go to great lengths to write this.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </section>
+  </article>
+</main>
+
+            <footer class="site-footer">
+  <section>
+      <a class="subscribe-button" href="/index.xml">
+          RSS</a>
+  </section>
+  <section>
+    <a href="#top-of-site">
+        <svg width="32" height="32" viewBox="0 0 100 100">
+            <path fill="#fff" d="m50 0C36.738.0 24.02 5.2695 14.645 14.645s-14.645 22.094-14.645 35.355 5.2695 25.98 14.645 35.355S36.739 1e2 50 1e2s25.98-5.2695 35.355-14.645S1e2 63.261 1e2 50s-5.2695-25.98-14.645-35.355-22.094-14.645-35.355-14.645zm20.832 62.5L50 40.043 29.375 62.5c-1.207.74219-2.7656.57812-3.7891-.39844-1.0273-.98047-1.2695-2.5273-.58594-3.7695l22.918-25c.60156-.61328 1.4297-.96094 2.2891-.96094.86328.0 1.6914.34766 2.293.96094l22.918 25c.88672 1.2891.6875 3.0352-.47266 4.0898-1.1562 1.0508-2.9141 1.0859-4.1133.078125z"/>
+        </svg>
+    </a>
+  </section>
+  <section>
+      
+  </section>
+</footer>
+
+        </main>
+    </body>
+</html>

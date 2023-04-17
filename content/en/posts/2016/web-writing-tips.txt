@@ -1,0 +1,12 @@
+---
+date: 2016-05-14
+lastmod: 2021-06-01
+title: Web writing tips
+---
+
+1. *Highlight* keywords.
+2. Use meaningful sub-headings.
+3. Use bulleted lists.
+4. One idea per paragraph.
+5. Use the inverted pyramid (conclusion first).
+6. Use half the word count.

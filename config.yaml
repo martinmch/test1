@@ -1,0 +1,26 @@
+title: "martinmch.com"
+paginate: 100
+author:
+  name: "Martin Christiansen"
+  email: 'test@test.test'
+theme: 'arabica'
+defaultContentLanguage: 'en'
+defaultContentLanguageInSubdir: true
+
+languages:
+  da:
+    contentDir: content/da
+    languageName: Danish
+    params:
+      description: "y"
+      flagcode: dk
+  en:
+    contentDir: content/en
+    languageName: English
+    params:
+      description: "x"
+      flagcode: us
+
+
+params:
+  logoTitle: "martinmch."

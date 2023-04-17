@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>martinmch.com</title>
+    <link>/da/</link>
+    <description>Recent content on martinmch.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>test@test.test (Martin Christiansen)</managingEditor>
+    <webMaster>test@test.test (Martin Christiansen)</webMaster>
+    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/da/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grydestegt kylling</title>
+      <link>/da/opskrifter/grydestegt-kylling/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/da/opskrifter/grydestegt-kylling/</guid>
+      <description>Serveres med nye eller ristede hele kartofler, agurkesalat, skilt sovs.
+Hæld evt. hvidvin eller æblecider ved kyllingen. Jævn sovsen med creme
+fraiche. Spis flute og tomatsalat til.</description>
+    </item>
+    
+    <item>
+      <title>Social Media Stop (SMS)</title>
+      <link>/da/posts/2016/socmedstop/</link>
+      <pubDate>Sun, 31 Jul 2016 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/da/posts/2016/socmedstop/</guid>
+      <description>Jeg har aldrig været storforbruger af de sociale medier. Jeg fortrækker at læse min nyheder i en avis, og høre om mine venners bedrifter over en kop kaffe. Jeg finder, så vidt muligt, tid til at mødes med store og små.
+De sociale medier har jeg før i tiden betragtet som et værktøj, men på det seneste er det blevet en ugentlig pligt at følge op på. Nu gør jeg en ende på det; ikke for at bryde kontakten med gamle og nye bekendte.</description>
+    </item>
+    
+  </channel>
+</rss>

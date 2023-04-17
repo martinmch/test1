@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <title>
+      
+      The misunderstood concept of code comments - martinmch.com
+      
+    </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+    
+</head>
+
+    <body class="page-template">
+        <header id="top-of-site">
+    <div>
+        <h3>
+            <a href="/en/">
+                
+                    martinmch.
+                
+            </a>
+            <br>
+            <small>x</small>
+        </h3>
+    </div>
+
+    <div class="nav">
+        
+        
+    </div>
+</header>
+
+        <main class="content" role="main">
+            
+<main class="content" role="main">
+  <article class="post page">
+    <header class="post-header">
+      <h1 class="post-title">The misunderstood concept of code comments</h1>
+      <p class="byline">
+        by <span class="author">Martin Christiansen</span>
+      </p>
+    </header>
+    <section class="post-content">
+      <p>Code comments shouldn&rsquo;t be syntax highlighted as faded grey, or other hard to
+see colors. They should be red as a wildfire, and you shouldn&rsquo;t have that many
+of them. Comments should explain the why, never the what. Explaining the why
+is creating a breadcrumb trail through the code to allow easy reading.
+Explaining the what is just dumbing down the code and increases the risk of
+comment rot.</p>
+<p>The pinnacle of good code is for it to be self-documenting <em>in other&rsquo;s eyes</em>,
+but during the ascencion, we&rsquo;ll have to leave a breadcrumb trail for
+developers who daringly follow us.</p>
+<p>In programming courses, students are usually taught to be lavish with comments.
+It is of the utmost importance, that they comment every single line of code, to
+show that they understand, what they&rsquo;ve done. Well, here&rsquo;s the knockout. The guy
+they found on fiverr® can comment the code as well.</p>
+<p>The code is just an implementation of a solution to a problem. The solution
+should be thoroughly described in a report on the problem. This takes care of
+&ldquo;what&rdquo; the code is doing, and brings us to the real purpose of comments. Why
+the code is implemented the way it is.</p>
+<p>Comments must be well-written, terse<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and not laconic<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> or verbose.
+Comments are used to explain why the code is as it is, not what the code does.
+Consider these examples based on the <code>display</code> function from
+<code>openbsd-src/ls.c</code>:</p>
+<pre tabindex="0"><code>/*
+ * Displays a list of all files in directory
+ */
+static void
+display(FTSENT *p, FTSENT *list) { ... }
+</code></pre><p>This is so concise that it borders to be incorrect. The reader will have
+gained close to nothing from reading the comment, that he would&rsquo;ve not gotten
+from reading the function signature. In which case there&rsquo;s no reason to have a
+comment. Now consider (the actual comment at the time of writing):</p>
+<pre tabindex="0"><code>/*
+ * Display() takes a linked list of FTSENT structures and passes the list
+ * along with any other necessary information to the print function.  P
+ * points to the parent directory of the display list.
+ */
+static void
+display(FTSENT *p, FTSENT *list) { ... }
+</code></pre><p>Effectively concise telling just enough to understand the function, without
+having to delve into the code. The perfect abstraction.</p>
+<pre tabindex="0"><code>/*
+ * Given a list of FTSENT, display will magically print it out and include
+ * all the necessary information. This is done by iterating through the list
+ * and branching on FTSENT type (directory or file). If it&#39;s a directory,
+ * we need to handle fts_level, and fts_accpath, while these aren&#39;t necessary
+ * for regular files.
+ */
+static void
+display(FTSENT *p, FTSENT *list) { ... }
+</code></pre><p>This comment is verbose and goes in depth with implementation details. The
+abstraction level is too low. There&rsquo;s no reason to explain control flow at
+this level. This is better described in the body of the function <em>if
+necessary</em>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Terse (adjective): neatly or effectively concise.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Laconic (adjective): concise to the point of seeming rude or mysterious.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+    </section>
+  </article>
+</main>
+
+            <footer class="site-footer">
+  <section>
+      <a class="subscribe-button" href="/index.xml">
+          RSS</a>
+  </section>
+  <section>
+    <a href="#top-of-site">
+        <svg width="32" height="32" viewBox="0 0 100 100">
+            <path fill="#fff" d="m50 0C36.738.0 24.02 5.2695 14.645 14.645s-14.645 22.094-14.645 35.355 5.2695 25.98 14.645 35.355S36.739 1e2 50 1e2s25.98-5.2695 35.355-14.645S1e2 63.261 1e2 50s-5.2695-25.98-14.645-35.355-22.094-14.645-35.355-14.645zm20.832 62.5L50 40.043 29.375 62.5c-1.207.74219-2.7656.57812-3.7891-.39844-1.0273-.98047-1.2695-2.5273-.58594-3.7695l22.918-25c.60156-.61328 1.4297-.96094 2.2891-.96094.86328.0 1.6914.34766 2.293.96094l22.918 25c.88672 1.2891.6875 3.0352-.47266 4.0898-1.1562 1.0508-2.9141 1.0859-4.1133.078125z"/>
+        </svg>
+    </a>
+  </section>
+  <section>
+      
+  </section>
+</footer>
+
+        </main>
+    </body>
+</html>

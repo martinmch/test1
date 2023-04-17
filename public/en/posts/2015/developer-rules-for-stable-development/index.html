@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <title>
+      
+      Rules for developing code - martinmch.com
+      
+    </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+
+    
+</head>
+
+    <body class="page-template">
+        <header id="top-of-site">
+    <div>
+        <h3>
+            <a href="/en/">
+                
+                    martinmch.
+                
+            </a>
+            <br>
+            <small>x</small>
+        </h3>
+    </div>
+
+    <div class="nav">
+        
+        
+    </div>
+</header>
+
+        <main class="content" role="main">
+            
+<main class="content" role="main">
+  <article class="post page">
+    <header class="post-header">
+      <h1 class="post-title">Rules for developing code</h1>
+      <p class="byline">
+        by <span class="author">Martin Christiansen</span>
+      </p>
+    </header>
+    <section class="post-content">
+      <p>Some of these are inspired by
+<a href="https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code">The Power of 10 Rules</a>
+by Gerard J. Holzmann.</p>
+<ul>
+<li>
+<p>Avoid complex flow constructs, such as goto and recursion.
+<a href="../avoid-complex-flow-constructs">Read more.</a></p>
+</li>
+<li>
+<p>All loops must have fixed bounds. This prevents runaway
+code.</p>
+</li>
+<li>
+<p>Avoid heap memory allocation</p>
+</li>
+<li>
+<p>Restrict classes to a single printed page</p>
+</li>
+<li>
+<p>Restrict the scope of data to the smallest possible</p>
+</li>
+<li>
+<p>Abstain from using void (except at entry-point) in functions. A function is
+never void. All functions perform a transformation. Methods that
+mutate state should return void.</p>
+</li>
+<li>
+<p>Aim for immutable data structures</p>
+</li>
+<li>
+<p>Compile with all possible warnings; all warnings should be addressed before
+release of the software.</p>
+</li>
+<li>
+<p>Minimize control flow complexity and &ldquo;area under ifs&rdquo;, favoring consistent
+execution paths and times over &ldquo;optimally&rdquo; avoiding unnecessary work.</p>
+</li>
+<li>
+<p>Data dominates. If you&rsquo;ve chosen the right data structures and organized
+things well, the algorithms will almost always be self-evident.</p>
+</li>
+<li>
+<p>Data structures, not algorithms, are central to programming.</p>
+</li>
+<li>
+<p>Use good descriptive names</p>
+</li>
+<li>
+<p>Exceptions are for exceptional cases</p>
+</li>
+<li>
+<p>Cover all cases in your domain model</p>
+</li>
+<li>
+<p>The best performance improvement is the transition from the nonworking state
+to the working state.</p>
+</li>
+<li>
+<p>Spend more time on the right abstraction</p>
+</li>
+<li>
+<p>Make a domain model beforehand</p>
+</li>
+<li>
+<p>Exceptions should be used in exceptional (unrecoverable) cases.</p>
+</li>
+<li>
+<p>Understand design patterns. Known when to use design patterns.</p>
+</li>
+<li>
+<p>Abstractions often present themselves as duplicate code.</p>
+</li>
+<li>
+<p>Stay below 80 characters.</p>
+</li>
+<li>
+<p>Stay below 72 characters.</p>
+</li>
+<li>
+<p>Avoid leaky abstractions. Who&rsquo;s responsible when it fails?</p>
+</li>
+<li>
+<p>Sometimes (a -&gt; b -&gt; c) can be written as (a -&gt; c), or ((a -&gt; b)
+-&gt; c) or (a -&gt; (b -&gt; c)).</p>
+</li>
+<li>
+<p>Design with optionals or design without. Not both. A class can&rsquo;t have
+&ldquo;either-or&rdquo; field.</p>
+</li>
+<li>
+<p>A function should never accept a bool argument. Be precatious about bool. Bool
+is a type that should only be used in conditionals.</p>
+</li>
+<li>
+<p>Mutable data structures are inherently not thread-safe. Immutable data
+structures are inherently thread-safe.</p>
+</li>
+<li>
+<p>Use small scopes.</p>
+</li>
+<li>
+<p>Have a single source of truth</p>
+</li>
+</ul>
+
+    </section>
+  </article>
+</main>
+
+            <footer class="site-footer">
+  <section>
+      <a class="subscribe-button" href="/index.xml">
+          RSS</a>
+  </section>
+  <section>
+    <a href="#top-of-site">
+        <svg width="32" height="32" viewBox="0 0 100 100">
+            <path fill="#fff" d="m50 0C36.738.0 24.02 5.2695 14.645 14.645s-14.645 22.094-14.645 35.355 5.2695 25.98 14.645 35.355S36.739 1e2 50 1e2s25.98-5.2695 35.355-14.645S1e2 63.261 1e2 50s-5.2695-25.98-14.645-35.355-22.094-14.645-35.355-14.645zm20.832 62.5L50 40.043 29.375 62.5c-1.207.74219-2.7656.57812-3.7891-.39844-1.0273-.98047-1.2695-2.5273-.58594-3.7695l22.918-25c.60156-.61328 1.4297-.96094 2.2891-.96094.86328.0 1.6914.34766 2.293.96094l22.918 25c.88672 1.2891.6875 3.0352-.47266 4.0898-1.1562 1.0508-2.9141 1.0859-4.1133.078125z"/>
+        </svg>
+    </a>
+  </section>
+  <section>
+      
+  </section>
+</footer>
+
+        </main>
+    </body>
+</html>

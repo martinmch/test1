@@ -1,0 +1,29 @@
+move Subscribe via to posts/index @footer
+
+Create book page with a detailed book record @footer
+
+# Post ideas
+
+- Email: The best digital communication platform
+- Letters: The best communication platform
+- Slow down, or, why you shouldn't drive more than 30 mph.
+- Git going
+    1. Make atomic commits
+    2. Write good messages
+    3. Revise history before sharing
+- Writing readable C#
+    - Make IO Explicit
+    - Keep IO close to the entrypoint.
+    - Use explicit names for control flow.
+- Use plaintext email
+    - https://useplaintext.email/
+- FOOP (Functional Object Oriented Programming)
+    - Immutability
+    - First class functions
+    - Design patterns
+
+- Code should be fast to test
+    - less than three seconds
+      - unit tests run selected test instantly
+Undocumented code is wrong code
+- Plaintext formatting

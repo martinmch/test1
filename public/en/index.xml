@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>martinmch.com</title>
+    <link>/en/</link>
+    <description>Recent content on martinmch.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>test@test.test (Martin Christiansen)</managingEditor>
+    <webMaster>test@test.test (Martin Christiansen)</webMaster>
+    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Boiled chicken</title>
+      <link>/en/recipes/boiled-chicken/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/recipes/boiled-chicken/</guid>
+      <description>There is no summary</description>
+    </item>
+    
+    <item>
+      <title>Re: Styling external links</title>
+      <link>/en/posts/2023/2023-03-03-re-styling-external-links/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2023/2023-03-03-re-styling-external-links/</guid>
+      <description>DESCRIPTION I came across an article on styling external links by Jake Bauer. In the article he details a CSS trick to append an arrow to all external links.
+This can be accomplished using the semantic HTML attribute rel and a simple attribute selector in CSS
+&amp;lt;style&amp;gt; a[rel=external]::after { content: &amp;#34;^&amp;#34;; } &amp;lt;/style&amp;gt; &amp;lt;a rel=external href=&amp;#34;https://www.paritybit.ca/&amp;#34;&amp;gt;ParityBit&amp;lt;/a&amp;gt; EXAMPLES ParityBit</description>
+    </item>
+    
+    <item>
+      <title>Is it safe to download files from a shady website?</title>
+      <link>/en/posts/2022/malicious-file/</link>
+      <pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2022/malicious-file/</guid>
+      <description>&lt;p&gt;Trusting people on the internet can be difficult. Especially when they tempt us
+with things we want. It&amp;rsquo;s important to understand the basics of trust online,
+and determine for yourself what risks are worth taking. You should use all the tools
+available to help you make an informed decision, and weigh it against how much
+you need the offered good.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Controlling a remote MPD server</title>
+      <link>/en/posts/2021/remote-mpd-server/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2021/remote-mpd-server/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve written about my music setup on multiple occasions, and was
+pleasantly surprised by the ease of which I could control my remote MPD
+server today.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been running MPD on my personal computer for close to six years
+now. As I was working on my office laptop today, I wanted to skip a
+song, but had no easy access to my personal computer. Luckily, this was
+easily solved by directing my office laptop MPD client (&lt;code&gt;vimpc&lt;/code&gt;) to my
+personal computer.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The misunderstood concept of code comments</title>
+      <link>/en/posts/2020/comments-should-be-red/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2020/comments-should-be-red/</guid>
+      <description>&lt;p&gt;Code comments shouldn&amp;rsquo;t be syntax highlighted as faded grey, or other hard to
+see colors. They should be red as a wildfire, and you shouldn&amp;rsquo;t have that many
+of them. Comments should explain the why, never the what. Explaining the why
+is creating a breadcrumb trail through the code to allow easy reading.
+Explaining the what is just dumbing down the code and increases the risk of
+comment rot.&lt;/p&gt;
+&lt;p&gt;The pinnacle of good code is for it to be self-documenting &lt;em&gt;in other&amp;rsquo;s eyes&lt;/em&gt;,
+but during the ascencion, we&amp;rsquo;ll have to leave a breadcrumb trail for
+developers who daringly follow us.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The misunderstood concepts of code comments</title>
+      <link>/en/posts/2020/2020-08-11-comments-should-be-red/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2020/2020-08-11-comments-should-be-red/</guid>
+      <description>DESCRIPTION Code comments shouldn&amp;rsquo;t be syntax highlighted as grey. Nor any other concealed color. They should be red as a wildfire, and you shouldn&amp;rsquo;t have that many of them. Comments should explain the why, never the what. Explaining the why is creating a breadcrumb trail through the code to allow easy reading. Explaining the what is just dumbing down the code and increases the risk of comment rot.
+The pinnacle of good code is for it to be self-documenting in other’s eyes, but during the ascension, we’ll have to leave a breadcrumb trail for developers who daringly follow us.</description>
+    </item>
+    
+    <item>
+      <title>E-mail etiquette</title>
+      <link>/en/posts/2018/2018-email-etiquette/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2018/2018-email-etiquette/</guid>
+      <description>E-mail is an abbreviation for electronic mail. Mail is a system for interchanging letters. So to better understand e-mail, we should understand regular mail.
+Regular mail begins in your house. You&amp;rsquo;re sitting at the front-line in the trenches. The bombing has finally stopped, you don&amp;rsquo;t know for how long. You get out a piece of paper, and a pen to scribble your last thoughts down for your family to read. You begin by putting the date down in the upper right corner, and then you&amp;rsquo;re greeting.</description>
+    </item>
+    
+    <item>
+      <title>My take on Blind Carbon Copy</title>
+      <link>/en/posts/2019/bcc/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2019/bcc/</guid>
+      <description>The term carbon copy refers to copying a document being written by putting a piece of carbon paper in between two sheets of paper, before typing/writing on the top piece of paper.
+When writing an e-mail the CC field is used for sending copies to other recipients. The BCC field is used for sending copies to other recipients without informing the initial recipient(s) about it.
+An email-address is a piece of contact information.</description>
+    </item>
+    
+    <item>
+      <title>A mathematical writing checklist</title>
+      <link>/en/posts/2018/math-writing-checklist/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2018/math-writing-checklist/</guid>
+      <description>I kept refering my students to &amp;ldquo;A Guide to Writing Mathematics&amp;rdquo;. written by Dr. Kevin P. Lee. The checklist is replicated below:
+Is your paper neatly typed? If you write the equations by hand, make sure that you have written in all of the equations. Also make sure that you have included all of the diagrams and graphs you intended to. Make sure that the paper is double-spaced and has wide enough margins.</description>
+    </item>
+    
+    <item>
+      <title>Intention of my website</title>
+      <link>/en/website-intention/</link>
+      <pubDate>Sat, 03 Mar 2018 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/website-intention/</guid>
+      <description>This website is my collection of documents on the World Wide Web. I won&amp;rsquo;t guarantee that the documents won&amp;rsquo;t be updated and altered, but I&amp;rsquo;ll do what&amp;rsquo;s in my power to keep all links alive and well.
+When I launched my first website, and a good many years after that, I was a little uncomfortable with it. But people I trust have persuaded me that some might find it interesting, and I realized that it would allow me to acknowledge those who&amp;rsquo;ve helped me along the way.</description>
+    </item>
+    
+    <item>
+      <title>Handling a music library in 2017</title>
+      <link>/en/posts/2017/music-library/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2017/music-library/</guid>
+      <description>The concept having a music collection has changed drastically since I was a kid. I was raised with CD collections (and from these ripped mp3 collections). These were very common, and there were certain CDs that everybody had in their collection.
+When I was studying, I found the process of selecting and moving music to my cellphone was tedious. Further more, the software for managing music and playlists on my cellphone was subpar.</description>
+    </item>
+    
+    <item>
+      <title>Social Media Stop (SMS)</title>
+      <link>/en/posts/2016/socmedstop/</link>
+      <pubDate>Sun, 31 Jul 2016 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2016/socmedstop/</guid>
+      <description>I&amp;rsquo;ve never been a big consumer of social media. I prefer to read my news in a newspaper, and hear about my friends lives and endeavours over a cup of coffee. I prefer, as much as possible, to meet up with my social circle.
+Until recently, I considered social media as a tool, but lately it has become a burden. A circus. I&amp;rsquo;m quitting the circus. Not to break off contact with old and new acquaintances.</description>
+    </item>
+    
+    <item>
+      <title>Web writing tips</title>
+      <link>/en/posts/2016/web-writing-tips/</link>
+      <pubDate>Sat, 14 May 2016 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2016/web-writing-tips/</guid>
+      <description> Highlight keywords Use meaningful sub-headings Use bulleted lists One idea per paragraph. Use the inverted pyramid (conclusion first). Use half the word count. </description>
+    </item>
+    
+    <item>
+      <title>Avoid complex flow constructs</title>
+      <link>/en/posts/2015/avoid-complex-flow-constructs/</link>
+      <pubDate>Wed, 25 Nov 2015 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2015/avoid-complex-flow-constructs/</guid>
+      <description>If If is one of the major flow constructs in most languages. There are plenty of cases where if statements are completely justified, but there are also a lot of places, where they&amp;rsquo;re unnecessary. Consider the following:
+namespace UsingIfs { public interface IDrink { string Name { get; } List&amp;lt;Ingredient&amp;gt; Ingredients { get; } float Price { get; } } public class OrangeJuice : IDrink { public string Name =&amp;gt; &amp;#34;Orange juice&amp;#34;; public List&amp;lt;Ingredient&amp;gt; Ingredients =&amp;gt; new List() { Ingredient.</description>
+    </item>
+    
+    <item>
+      <title>Rules for developing code</title>
+      <link>/en/posts/2015/developer-rules-for-stable-development/</link>
+      <pubDate>Wed, 25 Nov 2015 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2015/developer-rules-for-stable-development/</guid>
+      <description>Some of these are inspired by The Power of 10 Rules by Gerard J. Holzmann.
+Avoid complex flow constructs, such as goto and recursion. Read more.
+All loops must have fixed bounds. This prevents runaway code.
+Avoid heap memory allocation
+Restrict classes to a single printed page
+Restrict the scope of data to the smallest possible
+Abstain from using void (except at entry-point) in functions. A function is never void. All functions perform a transformation.</description>
+    </item>
+    
+    <item>
+      <title>Websites and web applications</title>
+      <link>/en/posts/2014/website-and-webapplications/</link>
+      <pubDate>Wed, 24 Sep 2014 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2014/website-and-webapplications/</guid>
+      <description>The world wide web has evolved into two major categories: websites and web applications. This is my personal way of distinguishing between the two.
+Websites:
+Focus on content Stays the same Links are reliable Browser behavior is backwards compatible Promotes web surfing All people have their own site Works1 without javascript Web applications:
+Dynamic Promotes staying on few pages. Keeps all people on the same sites. Further reading Web of Documents Daniel Janus Works means that the content is accessible.</description>
+    </item>
+    
+    <item>
+      <title>Using croc for running multiple git hooks</title>
+      <link>/en/posts/2014/croc/</link>
+      <pubDate>Fri, 29 Aug 2014 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/posts/2014/croc/</guid>
+      <description>I needed the opportunity to run several checks in one git hook. To accomplish this, I wrote croc1. It&amp;rsquo;s a very simple and crude script with some pretty printing. It&amp;rsquo;s very useful for running checks as git hooks.
+To use the dispatcher, symlink it to the desired git hook stage, and create a corresponding directory. Symlink or move any existing scripts into the dispatcher directory. Git hook will trigger the dispatcher, triggering any scripts not marked as .</description>
+    </item>
+    
+  </channel>
+</rss>

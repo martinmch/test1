@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recipes on martinmch.com</title>
+    <link>/en/recipes/</link>
+    <description>Recent content in Recipes on martinmch.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>test@test.test (Martin Christiansen)</managingEditor>
+    <webMaster>test@test.test (Martin Christiansen)</webMaster>
+    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/en/recipes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Boiled chicken</title>
+      <link>/en/recipes/boiled-chicken/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/en/recipes/boiled-chicken/</guid>
+      <description>There is no summary</description>
+    </item>
+    
+  </channel>
+</rss>

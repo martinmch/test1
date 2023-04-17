@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opskrifters on martinmch.com</title>
+    <link>/da/opskrifter/</link>
+    <description>Recent content in Opskrifters on martinmch.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>test@test.test (Martin Christiansen)</managingEditor>
+    <webMaster>test@test.test (Martin Christiansen)</webMaster>
+    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/da/opskrifter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grydestegt kylling</title>
+      <link>/da/opskrifter/grydestegt-kylling/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      <author>test@test.test (Martin Christiansen)</author>
+      <guid>/da/opskrifter/grydestegt-kylling/</guid>
+      <description>Serveres med nye eller ristede hele kartofler, agurkesalat, skilt sovs.
+Hæld evt. hvidvin eller æblecider ved kyllingen. Jævn sovsen med creme
+fraiche. Spis flute og tomatsalat til.</description>
+    </item>
+    
+  </channel>
+</rss>
